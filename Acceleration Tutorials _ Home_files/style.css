@@ -1,0 +1,62 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  transition: background 0.4s;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('/images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #111;
+  color: #ccc;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
+
+.footer hr {
+  opacity: 0.2;
+}
+
+

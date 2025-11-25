@@ -1,0 +1,137 @@
+/* Fonts & base */
+body {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top slim strip */
+.top-strip {
+  background: #222;
+  font-size: 0.9rem;
+}
+
+/* Transparent nav that sits over hero */
+.nav-transparent {
+  background: transparent;
+  position: absolute;
+  top: 36px; /* sits below top-strip */
+  left: 0;
+  right: 0;
+  z-index: 40;
+  transition: background .25s ease;
+}
+.nav-transparent .navbar-brand { color: white; font-family: 'Playfair Display', serif; font-size: 1.25rem; }
+.nav-transparent .nav-link { color: #e9eef6; margin-left: .25rem; margin-right: .25rem; }
+
+/* when page scrolls we will add a class (optionally) to show solid background - keep for developer later */
+.scrolled .nav-transparent { background: rgba(15,15,15,0.85); position: fixed; top: 0; }
+
+/* Hero */
+.hero-section { position: relative; height: 66vh; min-height: 420px; overflow: hidden; }
+.hero-img { object-fit: cover; width: 100%; height: 100%; filter: brightness(0.45); transform: scale(1.02); }
+.hero-overlay { position: absolute; inset: 0; display: flex; align-items: center; }
+.hero-text { padding: 3rem 1.5rem; }
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-bottom: .6rem;
+  letter-spacing: -0.5px;
+}
+.hero-sub { font-size: 1.05rem; opacity: 0.95; max-width: 520px; }
+
+/* accent color similar to template blue */
+.accent { color: #2ba6e8; }
+
+/* big CTA styling */
+.btn-primary {
+  background: linear-gradient(90deg,#2ba6e8 0%,#1e90ff 100%);
+  border: none;
+  box-shadow: 0 6px 18px rgba(30,144,255,0.18);
+}
+
+/* feature circular icons row */
+.feature-strip {
+  transform: translateY(-34px);
+  z-index: 30;
+  position: relative;
+}
+.feature-circle {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid #fff;
+  box-shadow: 0 8px 28px rgba(30,30,30,0.12);
+  margin: 0 auto;
+}
+.feature-circle i { color: #2ba6e8; font-size: 1.6rem; }
+
+/* feature cards (desktop) */
+.features .card { border-radius: 12px; }
+
+/* Footer */
+footer { background: #111; color: #bbb; }
+
+/* small responsive tweaks */
+@media (max-width: 991px) {
+  .nav-transparent { position: relative; top: 0; }
+  .hero-title { font-size: 2rem; }
+  .hero-section { height: 52vh; }
+  .feature-strip { transform: translateY(0); margin-top: 1rem; }
+}
+
+
+.about-section {
+  background: linear-gradient(135deg, #f9fafb, #eef2f3);
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.about-section h2 span {
+  color: #ffb300; /* warm gold tone */
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-section .highlight {
+  color: #d4af37; /* gold color for IIT Delhi mention */
+  font-weight: 600;
+}
+
+/* Make footer stick to bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer to bottom */
+}
+
+footer {
+  margin-top: auto;
+}

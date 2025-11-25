@@ -1,0 +1,27 @@
+<% pageTitle = 'Home' %>
+
+<section class="hero-section text-center py-5 bg-light">
+  <div class="container">
+    <h1 class="fw-bold mb-3"><%= site.title %></h1>
+    <p class="lead mb-4"><%= site.tagline %></p>
+    <a href="/courses" class="btn btn-primary btn-lg">
+      <i class="bi bi-lightning-charge"></i> <%= site.heroButton %>
+    </a>
+  </div>
+</section>
+
+<section class="container py-5">
+  <div class="row text-center">
+    <% features.forEach(feature => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <i class="bi <%= feature.icon %> text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold"><%= feature.title %></h5>
+            <p class="text-muted"><%= feature.text %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>

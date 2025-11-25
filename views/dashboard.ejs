@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Acceleration Tutorials</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body class="bg-dark text-light">
+  <nav class="navbar navbar-dark bg-transparent fixed-top">
+    <div class="container">
+      <a href="/" class="navbar-brand fw-bold text-warning">
+        <i class="bi bi-lightning-charge-fill me-1"></i> Acceleration Tutorials
+      </a>
+      <a href="/logout" class="btn btn-sm btn-outline-light">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container py-5 mt-5">
+    <h3 class="fw-bold text-warning mb-3">Welcome, <%= user.name %>!</h3>
+    <p class="text-muted mb-4">Your study materials are available below:</p>
+
+    <div class="mb-3">
+      <a href="https://drive.google.com/drive/folders/1g1Bvpb3wEfGbGN1G1WJyk8kFMFM92zzf?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-warning">
+        Open Course Resources (Google Drive)
+      </a>
+    </div>
+
+    <p class="small text-muted">
+      *This link opens in a new tab. Make sure the folder's sharing is set to “Anyone with the link can view.”*
+    </p>
+  </main>
+
+  <footer class="text-center py-4 text-secondary small border-top border-secondary">
+    © <%= new Date().getFullYear() %> Acceleration Tutorials · All Rights Reserved
+  </footer>
+</body>
+</html>

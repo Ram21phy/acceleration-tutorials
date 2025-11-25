@@ -1,0 +1,100 @@
+<%- include('partials/header') %>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero-section py-5 text-light d-flex align-items-center"
+  style="background: linear-gradient(135deg, #0a1a36 0%, #081021 100%); min-height: 85vh;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold mb-3 text-warning">Empowering Students for IIT-JEE Success 🚀</h1>
+        <p class="lead mb-4 text-light opacity-75">
+          Join Acceleration Tutorials — where IIT Delhi mentors make Physics, Chemistry, and Math simple, smart, and powerful.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#courses" class="btn btn-warning btn-lg text-dark fw-semibold">Explore Courses</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Book a Free Demo</a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <img src="/images/hero.jpg" class="img-fluid rounded-4 shadow-lg" alt="Students learning" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-5 bg-light text-center text-dark">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-warning">About Us</h2>
+    <p class="lead mx-auto" style="max-width:900px;">
+      Acceleration Tutorials: Simple, Smart Learning.  
+      Our founders and teachers from IIT Delhi make complex topics easy to understand and help students achieve top results.
+    </p>
+  </div>
+</section>
+
+<!-- COURSES SECTION -->
+<section id="courses" class="py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-warning">Our Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 mb-4 bg-transparent border-warning">
+          <i class="bi bi-book fs-1 text-warning mb-3"></i>
+          <h5 class="text-light">Physics</h5>
+          <p class="text-secondary">Learn from IIT-level experts with conceptual clarity.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 mb-4 bg-transparent border-warning">
+          <i class="bi bi-calculator fs-1 text-warning mb-3"></i>
+          <h5 class="text-light">Mathematics</h5>
+          <p class="text-secondary">Develop a strong problem-solving foundation step by step.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 mb-4 bg-transparent border-warning">
+          <i class="bi bi-flask fs-1 text-warning mb-3"></i>
+          <h5 class="text-light">Chemistry</h5>
+          <p class="text-secondary">Master reactions and concepts with visual learning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-5 bg-dark text-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-warning">Get in Touch</h2>
+    <p class="lead mb-4 opacity-75">Have questions or want to enroll? Contact us now for personalized guidance.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIOrE9PEkd6EDZT4qN-8Nef4c6D3IRXJw1TUA9BgNtlZr9rw/viewform?usp=header" target="_blank"
+         class="btn btn-warning text-dark fw-semibold px-4 py-2">Inquiry Form</a>
+      <a href="tel:+919654765465" class="btn btn-outline-light px-4 py-2"><i class="bi bi-telephone me-1"></i> +91 9654765465</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL FOOTER -->
+<footer class="py-5 text-center text-light" style="background:#050b18;">
+  <div class="container">
+    <p class="mb-2 fw-bold text-warning">Acceleration Tutorials</p>
+    <p class="small text-muted mb-3">Sector-17, Rohini, Delhi, India</p>
+    <div class="d-flex justify-content-center gap-3 mb-3">
+      <a href="https://www.instagram.com/acceleration_tutorials/" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.youtube.com/@learnbehindtech" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+    </div>
+    <hr class="border-secondary">
+    <p class="small text-secondary mb-0">© <%= new Date().getFullYear() %> Acceleration Tutorials. All Rights Reserved. | Built by Ram</p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.navbar');
+    nav.classList.toggle('bg-dark', window.scrollY > 50);
+  });
+</script>
+
+<%- include('partials/footer') %>

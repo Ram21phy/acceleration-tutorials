@@ -1,0 +1,53 @@
+{
+  "name": "acceleration-tutorials",
+  "version": "1.0.0",
+  "description": "Acceleration Tutorials website - Express + EJS + Bootstrap starter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon app.js",
+    "server": "node app.js",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^1.20.3",
+    "connect-mongo": "^5.1.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.2",
+    "mongoose": "^8.20.0"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "electron-is-dev": "^2.0.0",
+    "nodemon": "^3.1.10"
+  },
+  "build": {
+    "appId": "com.acceleration-tutorials.app",
+    "productName": "Acceleration Tutorials",
+    "files": [
+      "main.js",
+      "app.js",
+      "models",
+      "routes",
+      "views",
+      "public",
+      "node_modules"
+    ],
+    "win": {
+      "target": ["portable"],
+      "sign": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "author": "You",
+  "license": "MIT"
+}

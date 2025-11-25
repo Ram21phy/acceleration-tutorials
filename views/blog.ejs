@@ -1,0 +1,18 @@
+<% pageTitle = 'Blog' %>
+
+<section class="container py-5">
+  <h2 class="text-center mb-4">Blog</h2>
+  <div class="row">
+    <% posts.forEach(post => { %>
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h5 class="fw-bold"><%= post.title %></h5>
+            <p class="text-muted"><%= post.excerpt %></p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>
