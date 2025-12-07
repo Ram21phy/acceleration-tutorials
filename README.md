@@ -144,8 +144,7 @@ MIT
 
 ## Author
 
-Ram
-
+Your Name
 
 ## Support
 
