@@ -1,27 +1,21 @@
-<% pageTitle = 'Contact' %>
-
 <section class="container py-5">
   <h2 class="text-center mb-4">Contact Us</h2>
 
-  <% if (success) { %>
+  <% if (typeof success !=='undefined' && success) { %>
     <div class="alert alert-success text-center">
       ✅ Thank you for your message! We’ll get back to you soon.
     </div>
-  <% } %>
+    <% } %>
 
-  <div class="row justify-content-center">
-    <div class="col-md-8 text-center">
-      <p class="lead mb-4">
-        For inquiries, please use the form below.
-      </p>
-      <a 
-        href="https://forms.gle/yYAKFMtuhgf9xWAM8" 
-        target="_blank" 
-        class="btn btn-primary btn-lg"
-        rel="noopener noreferrer"
-      >
-        Inquiry
-      </a>
-    </div>
-  </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="lead mb-4">
+            For inquiries, please use the form below.
+          </p>
+          <a href="https://forms.gle/yYAKFMtuhgf9xWAM8" target="_blank" class="btn btn-primary btn-lg"
+            rel="noopener noreferrer">
+            Inquiry
+          </a>
+        </div>
+      </div>
 </section>
