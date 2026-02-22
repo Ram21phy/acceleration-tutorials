@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron');
+app.disableHardwareAcceleration();
 const path = require('path');
 const isDev = require('electron-is-dev');
 

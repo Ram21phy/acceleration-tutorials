@@ -29,6 +29,7 @@ const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
+const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const User = require('./models/User'); // import user model
 
@@ -40,6 +41,8 @@ const app = express();
 // ✅ Set EJS as the view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(expressLayouts);
+app.set('layout', 'layout'); // default layout file
 
 // ✅ MongoDB connection
 const MONGO_URI = 'mongodb://127.0.0.1:27017/acceleration_tutorials';
@@ -82,7 +85,15 @@ app.use('/', authRoutes);
 app.use('/', dashboardRoutes);
 
 // ✅ Home route
-app.get('/', (req, res) => res.render('home', { pageTitle: 'Home' }));
+app.get('/', (req, res) => res.render('home', { pageTitle: 'Home', site: { title: 'Acceleration Tutorials' } }));
+
+// ✅ Static Page Routes
+app.get('/about', (req, res) => res.render('about', { pageTitle: 'About Us', site: { title: 'Acceleration Tutorials' } }));
+app.get('/courses', (req, res) => res.render('courses', { pageTitle: 'Our Courses', site: { title: 'Acceleration Tutorials' } }));
+app.get('/batches', (req, res) => res.render('batches', { pageTitle: 'Upcoming Batches', site: { title: 'Acceleration Tutorials' } }));
+app.get('/results', (req, res) => res.render('results', { pageTitle: 'Our Results', site: { title: 'Acceleration Tutorials' } }));
+app.get('/blog', (req, res) => res.render('blog', { pageTitle: 'Blog', site: { title: 'Acceleration Tutorials' } }));
+app.get('/contact', (req, res) => res.render('contact', { pageTitle: 'Contact Us', site: { title: 'Acceleration Tutorials' } }));
 
 // ✅ 404 fallback
 app.use((req, res) => {
@@ -91,4 +102,5 @@ app.use((req, res) => {
 
 // ✅ Start server
 const PORT = 3000;
-app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));
+const HOST = '0.0.0.0'; // Bind to all interfaces
+app.listen(PORT, HOST, () => console.log(`🚀 Server running at http://${HOST}:${PORT}`));
